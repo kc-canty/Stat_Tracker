@@ -26,7 +26,7 @@ router.post('/activities', function (req, res) {
   })
 })
 
-router.get('/actvities/:id', function (req, res) {
+router.get('/activities/:id', function (req, res) {
   id = req.params.id;
   Activity.findOne({_id: id}).then(function (err, activity) {
     if (err) {
@@ -36,7 +36,7 @@ router.get('/actvities/:id', function (req, res) {
   })
 })
 
-router.put('actvities/:id', function (req, res) {
+router.put('activities/:id', function (req, res) {
   id = req.params.id;
   Activity.findOneAndUpdate({_id: id}).then(function (err, activity) {
     if (err) {
@@ -46,7 +46,7 @@ router.put('actvities/:id', function (req, res) {
   })
 })
 
-router.delete('actvities/:id', function (req, res) {
+router.delete('activities/:id', function (req, res) {
   id = req.params.id;
   Activity.remove({_id: id}).then(function (err, activity) {
     if (err) {
